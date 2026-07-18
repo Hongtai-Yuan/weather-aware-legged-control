@@ -1,0 +1,1 @@
+cmd_/home/mini/leg2_ws/src/legged_control/legged_examples/legged_damiao/5.15/Module.symvers := sed 's/\.ko$$/\.o/' /home/mini/leg2_ws/src/legged_control/legged_examples/legged_damiao/5.15/modules.order | scripts/mod/modpost -m -a  -o /home/mini/leg2_ws/src/legged_control/legged_examples/legged_damiao/5.15/Module.symvers -e -i Module.symvers   -T -

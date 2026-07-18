@@ -28,6 +28,22 @@
           -J RF_HAA 0.0 -J RF_HFE -0.0 -J RF_KFE -2.101 
           -J RH_HAA 0.0 -J RH_HFE -0.0 -J RH_KFE -2.101" 
           output="screen"/>
+
+    <node name="synthetic_livox_cloud" pkg="livox_elevation_mapping" type="synthetic_livox_cloud.py" output="screen">
+        <param name="ground_truth_topic" value="/ground_truth/state"/>
+        <param name="target_odom_topic" value="/odom"/>
+        <param name="cloud_topic" value="/livox/lidar"/>
+        <param name="frame_id" value="odom"/>
+        <param name="publish_rate" value="20.0"/>
+        <param name="max_range" value="10.0"/>
+        <param name="lidar_x" value="0.14"/>
+        <param name="lidar_y" value="0.0"/>
+        <param name="lidar_z" value="0.03"/>
+        <param name="lidar_pitch" value="-0.523598775598299"/>
+        <param name="lidar_yaw" value="3.141592653589793"/>
+    </node>
+
+    <include file="$(find livox_elevation_mapping)/launch/local_elevation_mapping.launch"/>
           
    
     <!-- <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" clear_params="true"

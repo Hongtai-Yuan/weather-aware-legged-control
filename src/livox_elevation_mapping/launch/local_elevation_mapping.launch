@@ -1,0 +1,24 @@
+<launch>
+  <node pkg="livox_elevation_mapping"
+        type="local_elevation_mapper.py"
+        name="livox_local_elevation_mapper"
+        output="screen">
+    <param name="pointcloud_topic" value="/livox/lidar"/>
+    <param name="odom_topic" value="/odom"/>
+    <param name="map_frame" value="odom"/>
+    <param name="lidar_x" value="0.14"/>
+    <param name="lidar_y" value="0.0"/>
+    <param name="lidar_z" value="0.03"/>
+    <param name="lidar_pitch" value="-0.523598775598299"/>
+    <param name="lidar_yaw" value="3.141592653589793"/>
+    <param name="map_length" value="10.0"/>
+    <param name="resolution" value="0.10"/>
+    <param name="min_range" value="0.20"/>
+    <param name="max_range" value="10.0"/>
+    <param name="min_height" value="-0.30"/>
+    <param name="max_height" value="2.0"/>
+    <param name="ground_quantile" value="0.20"/>
+    <param name="obstacle_height_threshold" value="0.18"/>
+    <param name="publish_rate" value="20.0"/>
+  </node>
+</launch>

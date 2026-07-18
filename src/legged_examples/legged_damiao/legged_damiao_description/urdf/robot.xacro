@@ -39,7 +39,7 @@
     </link>
 
     <xacro:IMU connected_to="base" imu_name="base_imu" xyz="0 0 -0.03" rpy="0. 0. 0."/>
-    <xacro:LivoxMid360 connected_to="base" lidar_name="livox_mid360" xyz="0.10 0 0.03" rpy="0 0 3.141592653589793" topic="/livox/lidar"/>
+    <xacro:LivoxMid360 connected_to="base" lidar_name="livox_mid360" xyz="0.14 0 0.03" rpy="0 -0.523598775598299 3.141592653589793" topic="/livox/lidar"/>
 
 
     <xacro:leg prefix="LF" mesh_path="${mesh_path}" mirror="1" mirror_dae="True" front_hind="1" front_hind_dae="True">
